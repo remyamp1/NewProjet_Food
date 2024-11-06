@@ -158,19 +158,41 @@ class _SecondPagesState extends State<SecondPages> {
                                           fit: BoxFit.cover)),
                                 ),
                                 Text(Database.Mylist[index]['name']),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Text(Database.Mylist[index]['time']),
+                                      Spacer(),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(Database.Mylist[index]['time']),
+                                      Spacer(),
+                                    ],
+                                  ),
+                                ),
                                 Row(
                                   children: [
-                                    Text(Database.Mylist[index]['time']),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
                                     Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                    )
+                                      Icons.currency_rupee,
+                                      size: 15,
+                                    ),
+                                    Text(Database.Mylist[index]['rs']),
+                                    Spacer(),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Colors.green,
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.white,
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                Text(Database.Mylist[index]['rs']),
                               ],
                             ),
                           ),
