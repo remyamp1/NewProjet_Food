@@ -135,31 +135,44 @@ class _SecondPagesState extends State<SecondPages> {
                         crossAxisSpacing: 7),
                     itemCount: 4,
                     itemBuilder: (context, index) {
-                      return Container(
-                        // height: 500,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 236, 235, 235),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 100,
-                                //  width: 50,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            Database.Mylist[index]['image']),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text(Database.Mylist[index]['name']),
-                              Text(Database.Mylist[index]['time']),
-                              Text(Database.Mylist[index]['rs']),
-                            ],
+                      return SingleChildScrollView(
+                        child: Container(
+                          height: 500,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: const Color.fromARGB(255, 236, 235, 235),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 100,
+                                  //  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              Database.Mylist[index]['image']),
+                                          fit: BoxFit.cover)),
+                                ),
+                                Text(Database.Mylist[index]['name']),
+                                Row(
+                                  children: [
+                                    Text(Database.Mylist[index]['time']),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.yellow,
+                                    )
+                                  ],
+                                ),
+                                Text(Database.Mylist[index]['rs']),
+                              ],
+                            ),
                           ),
                         ),
                       );
