@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newporjet_foodapp/details.dart';
 import 'package:newporjet_foodapp/first.dart';
 import 'package:newporjet_foodapp/second.dart';
 
@@ -13,8 +14,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SecondPages(),
-    );
+        debugShowCheckedModeBanner: false, home: DetailsExample());
   }
 }
