@@ -135,66 +135,95 @@ class _SecondPagesState extends State<SecondPages> {
                         crossAxisSpacing: 7),
                     itemCount: 4,
                     itemBuilder: (context, index) {
-                      return SingleChildScrollView(
-                        child: Container(
-                          height: 500,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: const Color.fromARGB(255, 236, 235, 235),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10),
-                            child: Column(
-                              children: [
-                                Container(
-                                  height: 100,
-                                  //  width: 50,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              Database.Mylist[index]['image']),
-                                          fit: BoxFit.cover)),
-                                ),
-                                Text(Database.Mylist[index]['name']),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    children: [
-                                      Text(Database.Mylist[index]['time']),
-                                      Spacer(),
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow,
-                                      ),
-                                      Text(Database.Mylist[index]['time']),
-                                      Spacer(),
-                                    ],
-                                  ),
-                                ),
-                                Row(
+                      return Container(
+                        height: 600,
+                        width: 600,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: const Color.fromARGB(255, 236, 235, 235),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 140),
+                                child: Row(
                                   children: [
                                     Icon(
-                                      Icons.currency_rupee,
-                                      size: 15,
-                                    ),
-                                    Text(Database.Mylist[index]['rs']),
-                                    Spacer(),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.green,
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: Colors.white,
-                                      ),
+                                      Icons.favorite,
+                                      color: Colors.red,
+                                      size: 10,
                                     ),
                                   ],
                                 ),
-                              ],
-                            ),
+                              ),
+                              Container(
+                                height: 60,
+                                //  width: 50,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          Database.Mylist[index]['image']),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              Text(
+                                Database.Mylist[index]['name'],
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 15),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      Database.Mylist[index]['time'],
+                                      style: TextStyle(
+                                        color: const Color.fromARGB(
+                                            255, 95, 94, 94),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.yellow,
+                                    ),
+                                    Text(
+                                      Database.Mylist[index]['no'],
+                                      style: TextStyle(
+                                        color: const Color.fromARGB(
+                                            255, 95, 94, 94),
+                                      ),
+                                    ),
+                                    Spacer(),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.currency_rupee,
+                                    size: 15,
+                                  ),
+                                  Text(Database.Mylist[index]['rs']),
+                                  Spacer(),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: Colors.green,
+                                    ),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       );

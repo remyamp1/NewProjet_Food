@@ -6,25 +6,29 @@ class Database {
       'image': "assets/images/images1.jpeg",
       'name': "Avocada Salad",
       'time': "20min",
-      'rs': "15.00"
+      'rs': "15.00",
+      "no": "4.5"
     },
     {
-      'image': "assets/images/images1.jpeg",
+      'image': "assets/images/firstimage.jpeg",
       'name': "Avocada Salad",
       'time': "20min",
-      'rs': "15.00"
+      'rs': "15.00",
+      "no": "4.5"
     },
     {
       'image': "assets/images/download.jpeg",
       'name': "Royal Burger",
       'time': "20min",
-      'rs': "15.00"
+      'rs': "15.00",
+      "no": "4.5"
     },
     {
       'image': "assets/images/images1.jpeg",
       'name': "Fruites Salad",
       'time': "20min",
-      'rs': "15.00"
+      'rs': "15.00",
+      "no": "4.5"
     },
   ];
 }
